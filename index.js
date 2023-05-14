@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser')
 const express = require('express');
-
+require('./databases/conection')
 const app = express();
 
 app.use(function(req,res,next){
