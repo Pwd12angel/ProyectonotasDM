@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-const uri = 'mongodb+srv://Pwd12angel:DM12345@clusterdm.zzk2ajn.mongodb.net/?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://Pwd12angel:DM12345@clusterdm.zzk2ajn.mongodb.net/Notas?retryWrites=true&w=majority';
 
 mongoose.connect(uri,{
     //modulod de configuracion de mongoose
