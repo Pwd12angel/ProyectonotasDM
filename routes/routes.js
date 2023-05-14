@@ -4,5 +4,6 @@ const app = express();
 /* prueba RBN */
 app.use(require('./consultarNotas'));
 app.use(require('./consultarUsuarios'));
+app.use(require('./newUser'));
 
 module.exports = app;
