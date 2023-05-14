@@ -9,7 +9,8 @@ mongoose.connect(uri,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
-    .then(db => console.log('Base de datos conectada'))
+//Then nos retorna una promesa y la tratamos con catch
+    .then(db => console.log('Base de datos conectada ATLAS'))
     .catch(err => console.log(err));
     
 
