@@ -5,6 +5,7 @@ const app = express();
 app.use(require('./consultarNotas'));
 app.use(require('./consultarUsuarios'));
 app.use(require('./newUser'));
-app.use(require('../routes/login'))
+app.use(require('../routes/login'));
+app.use(require('../routes/newNotas'));
 
 module.exports = app;
