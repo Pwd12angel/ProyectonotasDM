@@ -11,6 +11,7 @@ route.post('/nuevaNota',async (req,res) =>{
        fechaLimite: body.fechaLimite,
        contenido: body.contenido,
        prioridad: body.prioridad,
+       autor: body.autor,
     });
     newNota.save().then((data)=>{
         return res.status (200).json({

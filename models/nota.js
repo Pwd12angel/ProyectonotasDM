@@ -17,7 +17,8 @@ const newNota = new notaSchema({
     },
     prioridad:{
         type:String
-    }  
+    },
+    autor: {type : mongoose.Schema.Types.ObjectId, ref:'usuarios'} 
 })
 
 module.exports = mongoose.model('notasU',newNota);

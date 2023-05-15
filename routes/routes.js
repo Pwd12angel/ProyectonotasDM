@@ -8,4 +8,7 @@ app.use(require('./newUser'));
 app.use(require('../routes/login'));
 app.use(require('../routes/newNotas'));
 
+//borrar
+app.use(require('../routes/borrarNota'));
+
 module.exports = app;

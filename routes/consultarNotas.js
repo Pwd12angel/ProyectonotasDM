@@ -3,9 +3,9 @@ const route = express();
 const notas = require('../models/nota');
 
 
-route.get('/notas',async (req,res) =>{
-
-    const prov = await notas.find().then(function(data){
+route.get('/notas/:id',async (req,res) =>{
+    const {id} = req.params
+    const prov = await notas.find({autor: id}).then(function(data){
         if(data){
             res.json({
                 data
@@ -19,6 +19,8 @@ route.get('/notas',async (req,res) =>{
                 err
             })
     }});
+
+    console.log(prov);
 
 });
 
