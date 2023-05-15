@@ -8,6 +8,7 @@ app.use(require('./newUser'));
 app.use(require('../routes/login'));
 app.use(require('../routes/newNotas'));
 app.use(require('../routes/borrarCueta'));
+app.use(require('../routes/actualizarNota'));
 
 //borrar
 app.use(require('../routes/borrarNota'));
