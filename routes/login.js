@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const express = require('express');
 const route = express();
 const User = require('../models/user');
@@ -13,20 +14,31 @@ route.post('/login',async (req,res) =>{
 
     const user = await User.findOne({correo});
 
-    console.log("frond "+contrasenia)
-    console.log("back "+user.contrasenia);
+    const validar = user === null ? false : contrasenia == user.contrasenia
 
-    if(contrasenia == user.contrasenia){
-        res.send({
-            name: user.name
-         })
-    }
-    else{
-        res.status(401).json(
+
+
+    if(!(user && validar)){
+         res.status(401).json(
             {
              error: 'Usuario invalidado'
             }
          )
+    }
+    else{
+
+        const userToken = {
+            id: user._id,
+            userName: user.name
+        }
+
+        //firmamos el token 
+        const token = jwt.sign(userToken,'123')
+        res.send({
+            id: user._id,
+            token
+         })
+         
     }
 
     
