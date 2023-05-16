@@ -7,7 +7,6 @@ route.post('/nuevaNota',async (req,res) =>{
     console.log(body);
     let newNota = new notas({
        nameNota: body.nameNota,
-       categoria: body.categoria,
        fechaLimite: body.fechaLimite,
        contenido: body.contenido,
        prioridad: body.prioridad,

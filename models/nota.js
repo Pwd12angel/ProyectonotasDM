@@ -7,7 +7,8 @@ const newNota = new notaSchema({
         type:String
     },
     categoria:{
-        type:String
+        type:Boolean,
+        default:false
     },
     fechaLimite:{
         type:String

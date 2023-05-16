@@ -3,8 +3,8 @@ const route = express();
 const nota = require('../models/nota');
 
 route.put('/actualizarNota',async(req,res)=>{
-    const {id ,nameNota,categoria,fechaLimite,contenido,prioridad} = req.body;
-    const proU = await nota.updateOne({_id:id}, {$set:{nameNota,categoria,fechaLimite,contenido,prioridad}}).then(function(data){
+    const {id ,nameNota,fechaLimite,contenido,prioridad} = req.body;
+    const proU = await nota.updateOne({_id:id}, {$set:{nameNota,fechaLimite,contenido,prioridad}}).then(function(data){
         if(data){
             res.json({
                 "mnsj":"Nota Actualizada" 

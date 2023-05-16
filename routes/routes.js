@@ -13,6 +13,7 @@ app.use(require('../routes/borrarCueta'));
 app.use(require('../routes/actualizarNota'));
 app.use(require('../routes/borrarNotasUsuario'));
 app.use(require('../routes/buscarUsuario'));
+app.use(require('./actualizarEstado'));
 //borrar
 app.use(require('../routes/borrarNota'));
 
