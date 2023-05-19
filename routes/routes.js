@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-/* prueba RBN */
+
 
 
 app.use(require('./consultarNotas'));
@@ -15,7 +15,7 @@ app.use(require('../routes/borrarNotasUsuario'));
 app.use(require('../routes/buscarUsuario'));
 app.use(require('./actualizarEstado'));
 app.use(require('./buscarUsuarioPorCorreo'));
-//borrar
+
 app.use(require('../routes/borrarNota'));
 
 module.exports = app;

@@ -3,7 +3,6 @@ const route = express();
 
 const nota = require('../models/nota');
 
-
 route.delete('/borrarTodasNotas/:id',async(req,res)=>{
 
     const {id} = req.params;

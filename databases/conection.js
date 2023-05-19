@@ -1,3 +1,5 @@
+/* Coneccion a la base de datos y validacion de coneccion */
+
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
