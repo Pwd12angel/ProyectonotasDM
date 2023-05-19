@@ -18,7 +18,7 @@ app.use(require('./buscarUsuarioPorCorreo'));
 
 app.use(require('../routes/buscarNotaId'));
 app.use(require('../routes/contarNotas'));
-//borrar
+//UNOS PEDILLOS
 
 app.use(require('../routes/borrarNota'));
 
