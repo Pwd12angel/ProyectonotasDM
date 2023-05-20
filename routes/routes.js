@@ -19,6 +19,8 @@ app.use(require('./notasCumplidas'));
 app.use(require('../routes/buscarNotaId'));
 app.use(require('../routes/contarNotas'));
 app.use(require('./prioridadAlta'));
+app.use(require('./prioridadMedia'));
+app.use(require('./prioridadBaja'));
 
 app.use(require('../routes/borrarNota'));
 
