@@ -13,7 +13,7 @@ route.post('/nuevoUsuario',async (req,res) =>{
     let newUsuario = new usuarios({
        name: body.name,
        correo: body.correo,
-       contrasenia: body.contrasenia,
+       contrasenia: passHash,
     });
     newUsuario.save().then((data)=>{
         return res.status (200).json({
