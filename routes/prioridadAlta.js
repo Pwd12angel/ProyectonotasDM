@@ -4,7 +4,7 @@ const nota = require('../models/nota');
 
 route.get('/prioridadAlt/:id',async(req,res)=>{
     const {id} = req.params;
-    const proU = await nota.find({autor : id, prioridad: {$all: "Alta"}}).exec().then(function(data){
+    const proU = await nota.find({autor : id, prioridad: {$all: "Alta"},categoria: false }).exec().then(function(data){
         if(data){
             res.json({
                 data 
