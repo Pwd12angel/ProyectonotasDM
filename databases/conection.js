@@ -12,10 +12,10 @@ mongoose.connect(uri,{
     useUnifiedTopology:true
 })
 //Then nos retorna una promesa y la tratamos con catch
-    .then(db => console.log('Base de datos conectada ATLAS'))
+    .then(db => console.log('Base de datos conectada'))
     .catch(err => console.log(err));
     
 
 mongoose.connection.on('open', _=> {
-    console.log("Conexion exitosa ",uri);
+    console.log("Conexion exitosa a mongo Atlas");
 });

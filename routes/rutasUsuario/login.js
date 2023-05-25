@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const express = require('express');
 const route = express();
-const User = require('../models/user');
+const User = require('../../models/user');
 const bcrypt = require('bcrypt');
 const { json } = require('body-parser');
 
@@ -14,8 +14,6 @@ route.post('/login',async (req,res) =>{
 
     const validar = user === null ? false : await bcrypt.compare(contrasenia,user.contrasenia);
 
-    console.log(validar);
-    
     if(!(validar)){
          res.status(401).json(
             {

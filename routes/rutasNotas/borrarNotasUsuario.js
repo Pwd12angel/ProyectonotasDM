@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express();
 
-const nota = require('../models/nota');
+const nota = require('../../models/nota');
 
 route.delete('/borrarTodasNotas/:id',async(req,res)=>{
 

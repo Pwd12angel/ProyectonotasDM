@@ -1,11 +1,10 @@
 const express = require('express');
 const bycrypt = require('bcrypt');
 const route = express();
-const usuarios = require('../models/user');
+const usuarios = require('../../models/user');
 
 route.post('/nuevoUsuario',async (req,res) =>{
     let body = req.body;
-    console.log(body);
     //constante para el hash 
     //pasamos la contraseña y el poder de hasheo 
     const passHash = await bycrypt.hash(body.contrasenia,10);

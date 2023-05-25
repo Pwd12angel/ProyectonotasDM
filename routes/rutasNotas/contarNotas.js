@@ -1,7 +1,7 @@
 
 const express = require('express');
 const route = express();
-const notas = require('../models/nota');
+const notas = require('../../models/nota');
 
 route.get('/contar/notas/:id', async (req, res) => {
     const id = req.params.id;

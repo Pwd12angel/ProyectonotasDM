@@ -1,12 +1,12 @@
 const express = require('express');
 const route = express();
-const user = require('../models/user');
+const user = require('../../models/user');
 
 
-route.get('/buscarUsuario/:id',async(req,res)=>{
-    const {id} = req.params
-    console.log(id);
-    const prou = await user.find({_id: id}).then(function(data){
+route.get('/buscarUsuarioPorCorreo/:correo',async(req,res)=>{
+    const {correo} = req.params
+    
+    const prou = await user.find({correo: correo}).then(function(data){
         if(data){
             res.json({
                 data 

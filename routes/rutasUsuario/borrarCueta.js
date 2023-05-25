@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express();
-const nota = require('../models/nota');
-const user = require('../models/user');
+const nota = require('../../models/nota');
+const user = require('../../models/user');
 
 
 

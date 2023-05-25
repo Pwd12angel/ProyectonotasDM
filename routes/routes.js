@@ -4,24 +4,24 @@ const app = express();
 
 
 
-app.use(require('./consultarNotas'));
-app.use(require('./consultarUsuarios'));
-app.use(require('./newUser'));
-app.use(require('../routes/login'));
-app.use(require('../routes/newNotas'));
-app.use(require('../routes/borrarCueta'));
-app.use(require('../routes/actualizarNota'));
-app.use(require('../routes/borrarNotasUsuario'));
-app.use(require('../routes/buscarUsuario'));
-app.use(require('./actualizarEstado'));
-app.use(require('./buscarUsuarioPorCorreo'));
-app.use(require('./notasCumplidas'));
-app.use(require('../routes/buscarNotaId'));
-app.use(require('../routes/contarNotas'));
-app.use(require('./prioridadAlta'));
-app.use(require('./prioridadMedia'));
-app.use(require('./prioridadBaja'));
+app.use(require('./rutasNotas/consultarNotas'));
+app.use(require('./rutasUsuario/consultarUsuarios'));
+app.use(require('./rutasUsuario/newUser'));
+app.use(require('./rutasUsuario/login'));
+app.use(require('./rutasNotas/newNotas'));
+app.use(require('./rutasUsuario/borrarCueta'));
+app.use(require('./rutasNotas/actualizarNota'));
+app.use(require('./rutasNotas/borrarNotasUsuario'));
+app.use(require('./rutasUsuario/buscarUsuario'));
+app.use(require('./rutasNotas/actualizarEstado'));
+app.use(require('./rutasUsuario/buscarUsuarioPorCorreo'));
+app.use(require('./rutasNotas/notasCumplidas'));
+app.use(require('./rutasNotas/buscarNotaId'));
+app.use(require('./rutasNotas/contarNotas'));
+app.use(require('./rutasNotas/prioridadAlta'));
+app.use(require('./rutasNotas/prioridadMedia'));
+app.use(require('./rutasNotas/prioridadBaja'));
 
-app.use(require('../routes/borrarNota'));
+app.use(require('./rutasNotas/borrarNota'));
 
 module.exports = app;

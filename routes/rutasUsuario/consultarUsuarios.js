@@ -1,6 +1,6 @@
 const express = require('express');
 const route = express();
-const usuarios = require('../models/user');
+const usuarios = require('../../models/user');
 
 route.get('/usuarios',async (req,res) =>{
 

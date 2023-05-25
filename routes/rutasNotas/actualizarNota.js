@@ -1,6 +1,6 @@
 const express = require('express')
 const route = express();
-const nota = require('../models/nota');
+const nota = require('../../models/nota');
 
 route.put('/actualizarNota',async(req,res)=>{
     const {id ,nameNota,fechaLimite,contenido,prioridad} = req.body;
